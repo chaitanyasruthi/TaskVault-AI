@@ -1,0 +1,21 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Logs
+logs/*.jsonl
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

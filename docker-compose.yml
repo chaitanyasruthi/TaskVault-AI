@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: taskvault_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: taskvault
+      POSTGRES_USER: taskvault
+      POSTGRES_PASSWORD: taskvault_dev_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - taskvault_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U taskvault -d taskvault"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  taskvault_data:
