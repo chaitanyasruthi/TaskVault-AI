@@ -4,5 +4,6 @@ sqlalchemy
 psycopg[binary]
 pydantic-settings
 python-dotenv
+celesto==0.1.13
 pytest
 httpx

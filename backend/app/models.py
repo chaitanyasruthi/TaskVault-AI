@@ -22,6 +22,12 @@ class AgentRun(Base):
         nullable=False
     )
 
+    # Actual Celesto computer ID
+    celesto_computer_id = Column(
+        String(150),
+        nullable=True
+    )
+
     task = Column(Text, nullable=False)
 
     status = Column(

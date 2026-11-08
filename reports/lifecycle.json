@@ -1,0 +1,107 @@
+{
+  "project_name": "TaskVault AI",
+  "lifecycle_stages": [
+    {
+      "stage": 1,
+      "name": "Sandbox Creation",
+      "description": "Create an isolated persistent Celesto cloud computer and capture its computer ID.",
+      "status": "implemented_and_cloud_tested"
+    },
+    {
+      "stage": 2,
+      "name": "Runtime Provisioning",
+      "description": "Check and install Python 3 when required.",
+      "status": "implemented"
+    },
+    {
+      "stage": 3,
+      "name": "Command Validation",
+      "description": "Validate the command before execution.",
+      "status": "implemented"
+    },
+    {
+      "stage": 4,
+      "name": "Task Execution",
+      "description": "Execute the approved task inside the Celesto sandbox.",
+      "status": "implemented_and_cloud_tested"
+    },
+    {
+      "stage": 5,
+      "name": "Result Collection",
+      "description": "Capture execution output, exit code, and streaming metadata.",
+      "status": "implemented"
+    },
+    {
+      "stage": 6,
+      "name": "Stop Persistent Sandbox",
+      "description": "Stop the persistent computer while retaining its identity for later reconnection.",
+      "status": "implemented_and_cloud_tested"
+    },
+    {
+      "stage": 7,
+      "name": "Resume Persistent Sandbox",
+      "description": "Reconnect to the same Celesto computer using its stored computer ID and verify command execution.",
+      "status": "implemented_and_cloud_tested"
+    },
+    {
+      "stage": 8,
+      "name": "Persistent Sandbox Deletion",
+      "description": "Delete the persistent computer through the API.",
+      "status": "implemented_and_cloud_tested"
+    },
+    {
+      "stage": 9,
+      "name": "Cleanup Verification",
+      "description": "Verify that the Celesto dashboard has zero active sandboxes after deletion.",
+      "status": "verified"
+    }
+  ],
+  "verified_runs": [
+    {
+      "run_id": 26,
+      "sandbox_name": "sbx-424095427a34",
+      "task": "Python Hello World",
+      "status": "completed",
+      "cleanup_status": "success",
+      "duration_seconds": 16.2
+    },
+    {
+      "run_id": 27,
+      "sandbox_name": "sbx-b73aa6327dc6",
+      "task": "Python addition",
+      "status": "completed",
+      "cleanup_status": "success",
+      "duration_seconds": 17.02
+    },
+    {
+      "run_id": 28,
+      "sandbox_name": "sbx-d2d953b3ffcc",
+      "task": "Python factorial",
+      "status": "completed",
+      "cleanup_status": "success",
+      "duration_seconds": 16.42
+    },
+    {
+      "run_id": 31,
+      "sandbox_name": "sbx-ded13c55d1db",
+      "task": "Python Hello World",
+      "status": "completed",
+      "cleanup_status": "success",
+      "duration_seconds": 19.857018
+    },
+    {
+      "run_id": 46,
+      "sandbox_name": "sbx-627f4f4ef457",
+      "computer_id": "cmp_0924a799e4ca",
+      "task": "Python Hello World",
+      "status": "completed",
+      "execution_exit_code": 0,
+      "execution_duration_seconds": 18.753013,
+      "stop": "passed",
+      "resume": "passed",
+      "resume_verification": "TASKVAULT_RESUMED",
+      "delete": "passed",
+      "dashboard_active_sandboxes_after_delete": 0
+    }
+  ]
+}

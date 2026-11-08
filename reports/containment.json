@@ -1,0 +1,43 @@
+{
+  "project_name": "TaskVault AI",
+  "security_testing": {
+    "safe_command": {
+      "command": "echo Hello World",
+      "expected_decision": "allow",
+      "tested": true,
+      "result": "passed"
+    },
+    "dangerous_command": {
+      "command": "rm -rf /",
+      "expected_decision": "block",
+      "tested": true,
+      "result": "passed"
+    },
+    "credential_access": {
+      "command": "cat .env",
+      "expected_decision": "block",
+      "tested": true,
+      "result": "passed"
+    }
+  },
+  "security_controls": [
+    "Command allowlist",
+    "Dangerous command pattern detection",
+    "Shell operator restrictions",
+    "Plan keyword validation",
+    "Command audit logging",
+    "Isolated Celesto cloud execution"
+  ],
+  "host_protection": {
+    "execution_target": "celesto_sandbox",
+    "direct_host_execution": false,
+    "host_filesystem_access": "not_permitted_by_design",
+    "containment_verification": "pending"
+  },
+  "limitations": [
+    "Current command validation uses basic pattern matching.",
+    "Arbitrary Python code execution requires stronger isolation and validation.",
+    "Prompt injection resistance has not been fully tested.",
+    "Host filesystem isolation requires additional verification."
+  ]
+}

@@ -1,0 +1,3 @@
+{"step":1,"event":"sandbox_created","status":"success","execution_target":"celesto_sandbox"}
+{"step":7,"event":"simulated_execution_failure","status":"failed","error":"Simulated command failure"}
+{"step":7,"event":"cleanup_attempted","status":"success","recovery_policy":"fresh_sandbox"}

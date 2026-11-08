@@ -1,0 +1,18 @@
+{
+  "project_name": "TaskVault AI",
+  "concurrency_target": 5,
+  "test_status": "not_tested",
+  "concurrent_jobs_tested": 0,
+  "successful_jobs": 0,
+  "failed_jobs": 0,
+  "execution_target": "celesto_sandbox",
+  "isolation": {
+    "unique_sandbox_per_job": true,
+    "shared_sandbox_between_jobs": false
+  },
+  "limitations": [
+    "Five simultaneous Celesto jobs have not yet been tested.",
+    "Concurrency performance and resource usage have not been measured.",
+    "Celesto account rate limits may affect concurrent execution."
+  ]
+}

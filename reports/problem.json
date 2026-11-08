@@ -1,0 +1,17 @@
+{
+  "project_name": "TaskVault AI",
+  "problem_title": "Secure AI Agent Execution in Isolated Cloud Environments",
+  "problem_statement": "AI agents can execute commands and manipulate files, but running untrusted operations directly on a user's computer creates security risks. TaskVault AI addresses this problem by executing approved tasks inside isolated Celesto cloud sandboxes.",
+  "proposed_solution": "A secure AI agent platform that plans user tasks, validates execution requests, generates Python programs, executes them inside isolated Celesto sandboxes, records execution history, and cleans up sandboxes after execution.",
+  "objectives": [
+    "Execute tasks inside isolated cloud environments",
+    "Prevent unauthorized and dangerous commands",
+    "Maintain an execution audit trail",
+    "Track sandbox lifecycle and execution results",
+    "Automatically clean up sandboxes"
+  ],
+  "execution_platform": "Celesto",
+  "backend_framework": "FastAPI",
+  "database": "PostgreSQL",
+  "execution_target": "celesto_sandbox"
+}

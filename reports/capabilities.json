@@ -1,0 +1,71 @@
+{
+  "project_name": "TaskVault AI",
+  "execution_platform": "Celesto",
+  "capabilities": [
+    {
+      "name": "Cloud Sandbox Execution",
+      "description": "Creates isolated Celesto cloud computers for executing tasks.",
+      "status": "implemented"
+    },
+    {
+      "name": "Python Runtime Provisioning",
+      "description": "Checks for Python and installs it when missing.",
+      "status": "implemented"
+    },
+    {
+      "name": "Task Planning",
+      "description": "Creates rule-based execution plans based on user requests.",
+      "status": "implemented"
+    },
+    {
+      "name": "Command Validation",
+      "description": "Checks commands against basic security rules.",
+      "status": "implemented"
+    },
+    {
+      "name": "Execution Audit Logging",
+      "description": "Records allowed and blocked commands.",
+      "status": "implemented"
+    },
+    {
+      "name": "Sandbox Lifecycle Tracking",
+      "description": "Tracks sandbox creation, execution, completion, and cleanup.",
+      "status": "implemented"
+    },
+    {
+      "name": "Persistent Sandbox Lifecycle",
+      "description": "Creates persistent computers and supports stopping and resuming the same computer.",
+      "status": "implemented_and_cloud_tested"
+    },
+    {
+      "name": "Computer ID Persistence",
+      "description": "Stores and retrieves the Celesto computer ID using PostgreSQL.",
+      "status": "implemented_and_cloud_tested"
+    },
+    {
+      "name": "Persistent Sandbox Deletion",
+      "description": "Deletes a persistent Celesto computer through the API.",
+      "status": "implemented_and_cloud_tested"
+    },
+    {
+      "name": "Execution Streaming",
+      "description": "Collects stdout, stderr, exit code, and execution duration from Celesto command events.",
+      "status": "implemented"
+    }
+  ],
+  "additional_capabilities": {
+    "snapshots": "not_implemented",
+    "browser_automation": "not_implemented",
+    "concurrent_execution": "not_tested"
+  },
+  "cloud_validation": {
+    "run_id": 46,
+    "sandbox_name": "sbx-627f4f4ef457",
+    "computer_id": "cmp_0924a799e4ca",
+    "execution": "passed",
+    "resume": "passed",
+    "resume_verification": "TASKVAULT_RESUMED",
+    "deletion": "passed",
+    "dashboard_after_deletion": "zero_active_sandboxes"
+  }
+}

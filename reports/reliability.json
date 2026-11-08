@@ -1,0 +1,37 @@
+{
+  "project_name": "TaskVault AI",
+  "test_summary": {
+    "total_runs": 5,
+    "successful_runs": 5,
+    "failed_runs": 0,
+    "success_rate_percent": 100.0
+  },
+  "execution_times_seconds": [
+    16.2,
+    17.02,
+    16.42,
+    19.857018,
+    18.753013
+  ],
+  "median_execution_time_seconds": 17.02,
+  "p90_execution_time_seconds": 19.857018,
+  "average_execution_time_seconds": 17.6500062,
+  "cleanup_successes": 5,
+  "cleanup_failures": 0,
+  "cleanup_success_rate_percent": 100.0,
+  "persistent_lifecycle_validation": {
+    "run_id": 46,
+    "sandbox_stop": "passed",
+    "sandbox_resume": "passed",
+    "resume_command_verification": "TASKVAULT_RESUMED",
+    "sandbox_deletion": "passed",
+    "active_sandboxes_after_deletion": 0
+  },
+  "limitations": [
+    "Only five successful executions have been measured.",
+    "The required 20-run reliability test is not yet completed.",
+    "Boot-to-ready time has not been measured separately.",
+    "Total Celesto execution cost has not yet been measured.",
+    "Concurrency testing has not yet been completed."
+  ]
+}

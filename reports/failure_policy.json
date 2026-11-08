@@ -1,0 +1,44 @@
+{
+  "project_name": "TaskVault AI",
+  "failure_scenario": {
+    "description": "A task fails during execution after completing some steps.",
+    "example": "Step 7 of 10 fails.",
+    "status": "documented"
+  },
+  "recovery_options": [
+    {
+      "strategy": "resume",
+      "description": "Continue from the last successfully completed step.",
+      "status": "planned"
+    },
+    {
+      "strategy": "rollback",
+      "description": "Undo supported changes made during the failed execution.",
+      "status": "planned"
+    },
+    {
+      "strategy": "fresh_sandbox",
+      "description": "Create a new isolated sandbox and restart the task.",
+      "status": "planned"
+    }
+  ],
+  "selected_default_policy": "fresh_sandbox",
+  "cleanup_policy": {
+    "always_attempt_cleanup": true,
+    "cleanup_after_success": true,
+    "cleanup_after_failure": true
+  },
+  "current_implementation": {
+    "exception_handling": true,
+    "sandbox_cleanup": true,
+    "resume_support": false,
+    "rollback_support": false,
+    "automatic_retry": false
+  },
+  "limitations": [
+    "Resume functionality is not implemented.",
+    "Rollback functionality is not implemented.",
+    "Automatic retry is not implemented.",
+    "Failure recovery has not yet been tested with an injected failure."
+  ]
+}
